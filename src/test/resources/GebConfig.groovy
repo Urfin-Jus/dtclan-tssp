@@ -1,4 +1,4 @@
-
+import com.aoe.gebspockreports.GebReportingListener
 import org.openqa.selenium.remote.DesiredCapabilities
 import org.openqa.selenium.remote.CapabilityType
 import org.openqa.selenium.logging.*
@@ -45,3 +45,6 @@ driver = {
 reportsDir = "build/reports/geb-reports/${new Date().format('MMddhh-mmss')}"
 
 //reporter = { new CustomReporter() }
+
+reportingListener = new GebReportingListener()
+reportsDir = 'build/geb-spock-reports'

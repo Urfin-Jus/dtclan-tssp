@@ -15,13 +15,17 @@ ext{
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 
 dependencies{
     testCompile "org.gebish:geb-spock:$gebVersion"
-    testCompile("org.spockframework:spock-core:1.1-groovy-2.4") { exclude group: "org.codehaus.groovy" }
+    testCompile("org.spockframework:spock-core:1.1-groovy-2.4-rc-2") { exclude group: "org.codehaus.groovy" }
     testCompile "org.codehaus.groovy:groovy-all:$groovyVersion"
+    testCompile "com.athaydes:spock-reports:1.6.0", { transitive = false }
+    testCompile 'com.aoe:geb-spock-reports:0.1.5'
+
     testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
     //testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
 }
