@@ -1,0 +1,35 @@
+plugins {
+    id "idea"
+    id "groovy"
+}
+
+ext{
+
+	ext {
+        	groovyVersion = '2.4.12'
+        	gebVersion = '2.1'
+        	seleniumVersion = '3.13.0'
+       		chromeDriverVersion = '3.13'
+        }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies{
+    testCompile "org.gebish:geb-spock:$gebVersion"
+    testCompile("org.spockframework:spock-core:1.1-groovy-2.4") { exclude group: "org.codehaus.groovy" }
+    testCompile "org.codehaus.groovy:groovy-all:$groovyVersion"
+    testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
+    //testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
+}
+
+sourceSets {
+    test {
+        resources {
+            srcDir "test/resources"
+        }
+    }
+}

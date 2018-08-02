@@ -1,0 +1,68 @@
+{"externalId": "DTCLAN-TSSP-ORDER-110718-1",
+  "state": "InProgress",
+  "relatedParty": [
+    {
+      "role": "customer",
+      "id": "DTCLAN-TSSP-Pro-Account-1"
+    }
+  ],
+  "orderItem": [
+    {
+      "action": "add",
+      "service": {
+        "serviceSpecification": {"id": "branch-ccpe"},
+        "id": "DTCLAN-TSSP-Pro-Branch-A",
+        "serviceCharacteristic": [
+          {"name":"branch-id","value":"Pro Branch A"},
+          {"name":"user-id","value":"pro-branch-a-user"},
+          {"name":"default-gateway","value":"192.168.0.1"},
+          {"name":"customer-branch-net-ip","value":"192.168.0.0/24"},
+          {"name":"session-login","value":"pro-branch-a-ppp-user"},
+          {"name":"external-bandwidth","value":"50"},
+          {"name":"external-uplink-bandwidth","value":"20"},
+          {"name":"antivirus","value":"YES"},
+          {"name":"antispam","value":"YES"},
+          {"name":"content-filtering","value":"YES"},
+          {"name":"web-filtering","value":"YES"},
+          {"name":"application-qos","value":"YES"},
+          {"name":"configurable-firewall","value":"YES"}
+        ]
+      }
+    },
+    {
+      "action": "add",
+      "service": {
+        "serviceSpecification": {"id": "branch-ccpe"},
+        "id": "DTCLAN-TSSP-Pro-Branch-B",
+        "serviceCharacteristic": [
+          {"name":"branch-id","value":"Pro Branch B"},
+          {"name":"user-id","value":"pro-branch-b-user"},
+          {"name":"default-gateway","value":"192.168.0.1"},
+          {"name":"customer-branch-net-ip","value":"192.168.0.0/24"},
+          {"name":"session-login","value":"pro-branch-b-ppp-user"},
+          {"name":"external-bandwidth","value":"50"},
+          {"name":"external-uplink-bandwidth","value":"20"},
+          {"name":"antivirus","value":"YES"},
+          {"name":"antispam","value":"YES"},
+          {"name":"content-filtering","value":"YES"},
+          {"name":"web-filtering","value":"YES"},
+          {"name":"application-qos","value":"YES"},
+          {"name":"configurable-firewall","value":"YES"}
+        ]
+      }
+    },
+    {
+      "action": "add",
+      "service": {
+        "serviceSpecification": {"id": "vpn"},
+        "id": "DTCLAN-TSSP-Advanced-VPN",
+        "serviceCharacteristic": [
+          {"name":"vpn-id","value":"DTCLAN-TSSP-Advanced-VPN"},
+          {"name":"sites-quota","value":"3"},
+          {"name":"intersite-firewall","value":"YES"},
+          {"name":"vpn-qos","value":"YES"}
+        ]
+      }
+    }
+  ]
+}
