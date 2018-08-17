@@ -1,7 +1,7 @@
 package pages
 
-import com.google.common.base.Stopwatch
-import geb.Page
+import Stopwatch
+import Page
 
 import modules.branch.mutual.*
 import modules.branch.portlets.*
@@ -12,7 +12,7 @@ import OrderTimingSample
 
 class BranchPage extends Page{
 
-    static at = {
+    /*static at = {
         title == 'Branch'
         waitFor(40) {
             [upperColumn1,centerColumn2,centerColumn3,lowColumn4].every{it.displayed}
@@ -144,7 +144,7 @@ class BranchPage extends Page{
             timeSample.inventoryUpdated = stopwatch.stop().elapsed()
         return browser.page
     }
-
+*/
 
 
 }

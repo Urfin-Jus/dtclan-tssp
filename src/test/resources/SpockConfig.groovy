@@ -1,3 +1,4 @@
+/*
 spockReports {
 
     set( ['com.athaydes.spockframework.report.outputDir': 'build/reports/geb-spock-reports',
@@ -10,4 +11,4 @@ spockReports {
 
     ] )
 
-}
+}*/

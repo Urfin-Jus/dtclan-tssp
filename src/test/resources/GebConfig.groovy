@@ -1,4 +1,4 @@
-import com.aoe.gebspockreports.GebReportingListener
+//import com.aoe.gebspockreports.GebReportingListener
 import org.openqa.selenium.remote.DesiredCapabilities
 import org.openqa.selenium.remote.CapabilityType
 import org.openqa.selenium.logging.*
@@ -21,15 +21,14 @@ waiting {
 driver = {
     System.setProperty("webdriver.chrome.driver", "build/resources/test/WebDriverBinaries/chromedriver")
     System.setProperty("webdriver.chrome.logfile", "$reportsDir/chromedriver.log")
-    System.setProperty("webdriver.chrome.verboseLogging", "true")
-    System.setProperty("tssp.performance.loggfile","$reportsDir/chromedriver-performance.log")
+    //System.setProperty("webdriver.chrome.verboseLogging", "true")
+    //System.setProperty("tssp.performance.loggfile","$reportsDir/chromedriver-performance.log")
 
     DesiredCapabilities capabilities = DesiredCapabilities.chrome()
     ChromeOptions options = new ChromeOptions()
         options.addArguments("--incognito")
 
     LoggingPreferences logPrefs = new LoggingPreferences()
-        logPrefs.enable(LogType.PERFORMANCE, Level.INFO)
         logPrefs.enable(LogType.BROWSER, Level.ALL)
 
     capabilities.setCapability(ChromeOptions.CAPABILITY, options)
@@ -42,9 +41,5 @@ driver = {
 
 //baseUrl = "http://tssp-route-dtag-tssp.deploy22.openshift.sdntest.netcracker.com"
 
-reportsDir = "build/reports/geb-reports/${new Date().format('MMddhh-mmss')}"
-
-//reporter = { new CustomReporter() }
-
-reportingListener = new GebReportingListener()
-reportsDir = 'build/geb-spock-reports'
+//reportingListener = new GebReportingListener()
+reportsDir = "build/reports/geb-reports"

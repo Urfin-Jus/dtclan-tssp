@@ -10,6 +10,8 @@ class zeroLevelPortalPage extends Page{
 
         CookieNotificaton(required:false) { module( TopCookieNotification ) }
 
+        MainContext { }
+
         OrderCompletionNotification(required:false) { module( LowOrderCompletionNotification ) }
 
         Footer { module(BottomFooter) }

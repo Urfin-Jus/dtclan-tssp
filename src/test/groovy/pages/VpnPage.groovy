@@ -1,18 +1,18 @@
 package pages
 
-import TSSPbasementPage
+import pages.prototype.zeroLevelPortalPage
 
-class VpnPage extends TSSPbasementPage{
+class VpnPage extends zeroLevelPortalPage{
     static url = '/vpn'
 
     static at = { title == 'VPN'}
 
     static content = {
-        vpnNavigator    { portletColumn1.$('#p_p_id_vpnNavigation_WAR_dtportalwar_') }
+        vpnNavigator(required:false)    { portletColumn1.$('#p_p_id_vpnNavigation_WAR_dtportalwar_') }
 
-        vpnTab  { portletColumn1.$('data-tab':'vpnTab')}
+        vpnTab(required: false)  { portletColumn1.$('data-tab':'vpnTab')}
 
-        vpnQosTab { portletColumn1.$('data-tab':'vpnQosTab') }
+        vpnQosTab(required: false) { portletColumn1.$('data-tab':'vpnQosTab') }
     }
 
 
